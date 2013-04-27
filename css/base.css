@@ -1,11 +1,11 @@
 /* System-wide style */
-html { margin:0; padding:0; -moz-background-size: 100%; background-color: #D9DFE4; }
 body { margin:0; padding:0; }
 a { text-decoration: none; color: white; }
-img{ border: 0; }	
-.active {text-decoration: underline;}
+img{ border: 0; } 
+/*.active {text-decoration: underline;}*/
 
 
+html, body { background-image: url("../images/bright_squares.png"); }
 
 
 /* Twitter Bootstrap style */
