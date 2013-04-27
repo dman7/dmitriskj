@@ -1,15 +1,14 @@
 /* System-wide style */
-body { margin:0; padding:0; }
 a { text-decoration: none; color: white; }
 img{ border: 0; } 
-/*.active {text-decoration: underline;}*/
+
 
 h1 { font-family: "Lobster", cursive; }
 
 
-.rounded {   -webkit-border-radius: 1000px; -moz-border-radius: 1000px; border-radius: 1000px; }
+.circle {   -webkit-border-radius: 1000px; -moz-border-radius: 1000px; border-radius: 1000px; }
 
-html, body { background-image: url("../images/bright_squares.png"); }
+html, body { background-image: url("bright_squares.png"); }
 
 
 /* Twitter Bootstrap style */

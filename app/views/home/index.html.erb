@@ -1,0 +1,27 @@
+<% content_for :content do %>
+  <center style = "margin-top: 25%;"><div class = "btn btn-warning circle" id = "semaphor" style = "height: 100px; width: 85px;">&nbsp;</div></center>
+<% end %>
+
+
+<% content_for :footer_javascript do %>
+  <script style = "text/javascript">
+    $(document).ready(function()
+    {
+      numClicks = 0
+      $("#semaphor").click(function()
+      {
+        $("#semaphor").removeClass("btn-warning")
+        $("#semaphor").removeClass("btn-success")
+        $("#semaphor").removeClass("btn-danger")
+
+        if      (numClicks % 3 === 0) { $("#semaphor").addClass("btn-success"); }
+        else if (numClicks % 3 === 1) { $("#semaphor").addClass("btn-danger");  }
+        else if (numClicks % 3 === 2) { $("#semaphor").addClass("btn-warning"); }
+
+        numClicks += 1
+      });
+
+      
+    });
+  </script>
+<% end %>
