@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html itemscope itemtype = "http://schema.org/Person">
+<head>
+	<title>Dmitri Skjorshammer</title>
+	<meta name = "Description" content = "Welcome to Dmitri's webpage!" />
+	<link rel = "stylesheet" href = "style.css" type = "text/css">
+	<script src = "https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.min.js" type = "text/javascript"></script>
+	
+</head>
+
+<body> 
+	<div id = "container">
+		<div class = "body">
+			<div class = "navigation-bar">
+					<table><tbody> 
+						<tr> 
+							<td><a href = "index.html">Home</a></td> 
+							<td><a href = "projects.html">Projects</a></td>
+							<!-- <td><a href = "academic.html">Academic</a></td> -->
+						</tr>
+					</tbody></table> 
+			</div>
+
+			<br /><br />
+
+			<p> Below is a phonetic keyboard that translates English to Russian. The keys you press on your keyboard are phonetically translated into their respective Cyrillic characters. </p> 
+
+			<div class = "row signature keyboard-area">
+				<div class = "span8 keyboard-input" style = "color: #fff">
+					<textarea id = "input" spellcheck = "false" placeholder = "Start typing in English..." type = "text"></textarea> 
+				</div>
+
+				<div class = "span7 keyboard-output"><p id = "output">Russian text will appear here</p></div>
+				<!--<applet code= TranslatorApp.class width="735" height="350" align="center"></applet>-->
+			</div>
+		</div>
+	</div>
+
+
+	<script type = "text/javascript">
+		$(document).ready(function()
+		{
+			$("#input").on("keyup", function()
+			{
+				// http://en.wikipedia.org/wiki/Cyrillic_characters_in_Unicode
+				var input = $(this).val();
+
+		    input = input.replace(/ja/g, "\u044F"); input = input.replace(/Ja/g, "\u042F");
+		    input = input.replace(/zh/g, "\u0436"); input = input.replace(/Zh/g, "\u0416");
+		    input = input.replace(/jo/g, "\u0451"); input = input.replace(/Jo/g, "\u0401");
+		    input = input.replace(/ju/g, "\u044E"); input = input.replace(/Ju/g, "\u042E");
+		    input = input.replace(/je/g, "\u044D"); input = input.replace(/Je/g, "\u042D");
+		    input = input.replace(/ch/g, "\u0447"); input = input.replace(/Ch/g, "\u0427");
+		    input = input.replace(/sh/g, "\u0448"); input = input.replace(/Sh/g, "\u0428");
+		    input = input.replace(/ii/g, "\u0438\u0439");
+
+	      input = input.replace(/b/g, "\u0431"); input = input.replace(/c/g, "\u0446"); 
+	      input = input.replace(/d/g, "\u0434"); input = input.replace(/f/g, "\u0444"); 
+	      input = input.replace(/g/g, "\u0433"); input = input.replace(/h/g, "\u0447");
+	      input = input.replace(/i/g, "\u0438"); input = input.replace(/j/g, "\u0439"); 
+	      input = input.replace(/l/g, "\u043B"); input = input.replace(/m/g, "\u043C"); 
+	      input = input.replace(/n/g, "\u043D"); input = input.replace(/p/g, "\u043F");
+	      input = input.replace(/q/g, "\u044F"); input = input.replace(/r/g, "\u0440"); 
+	      input = input.replace(/s/g, "\u0441"); input = input.replace(/t/g, "\u0442"); 
+	      input = input.replace(/u/g, "\u0443"); input = input.replace(/v/g, "\u0432");
+	      input = input.replace(/w/g, "\u0436"); input = input.replace(/x/g, "\u0445"); 
+	      input = input.replace(/y/g, "\u044B"); input = input.replace(/z/g, "\u0437");
+	      
+	      input = input.replace(/B/g, "\u0411"); input = input.replace(/C/g, "\u0421"); 
+	      input = input.replace(/D/g, "\u0414"); input = input.replace(/F/g, "\u0424"); 
+	      input = input.replace(/G/g, "\u0413"); input = input.replace(/H/g, "\u0427");
+	      input = input.replace(/I/g, "\u0418"); input = input.replace(/J/g, "\u0419"); 
+	      input = input.replace(/L/g, "\u041B"); input = input.replace(/N/g, "\u041D"); 
+	      input = input.replace(/P/g, "\u041F"); input = input.replace(/Q/g, "\u042F");
+	      input = input.replace(/R/g, "\u0420"); input = input.replace(/S/g, "\u0421"); 
+	      input = input.replace(/U/g, "\u0423"); input = input.replace(/V/g, "\u0412"); 
+	      input = input.replace(/W/g, "\u0416"); input = input.replace(/Y/g, "\u042B");       
+	      input = input.replace(/Z/g, "\u0417"); 
+
+	    	$("#output").html(input);
+			});
+		});
+	</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

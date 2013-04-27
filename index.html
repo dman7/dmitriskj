@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html itemscope itemtype = "http://schema.org/Person">
+<head>
+	<title>Dmitri Skjorshammer</title>
+	<meta name = "Description" content = "Welcome to Dmitri's webpage!" />
+	<link rel = "stylesheet" href = "style.css" type = "text/css">
+	<script src = "https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.min.js" type = "text/javascript"></script>
+	
+	<!--<link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:700' rel='stylesheet' type='text/css'>-->
+</head>
+
+<body> 
+	<div id = "container">
+		<div class = "body">
+			<div class = "row">
+				<div class = "span16 navigation-bar">
+					<table><tbody><tr> 
+							<td><a href = "index.html" class = "active">Home</a></td> 
+							<td><a href = "projects.html">Projects</a></td>
+							<!-- <td><a href = "academic.html">Academic</a></td> -->
+						</tr></tbody></table> 
+				</div>
+			</div>
+
+			<br /><br />
+
+			<div class = "row">
+				<div class = "signature span3" id = "first_name" style = "opacity: 0;"><p>Dmitri</p></div>
+				<div class = "span10">
+					<div class = "pull-center">
+						<a href = "https://www.facebook.com/dmitriskj"><img src = "images/facebook.png" /></a>
+						<a href = "http://www.linkedin.com/in/dmitriskj"><img src = "images/linkedin.png" /></a>
+						<a href = "https://twitter.com/dmitriskj"><img src = "images/twitter.png"/></a>
+					</div>
+				</div>
+				<div class = "signature span3" id = "last_name" style = "opacity: 0;">
+					<p>Skjorshammer</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10385421-4']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	  // Animate my name
+	  $(document).ready(function()
+		{
+			$("#first_name").animate({"opacity": 1}, 2000);	
+			setTimeout("$('#last_name').animate({'opacity': 1}, 2000)", 2000);
+		})
+	</script>
+
+</body>
+</html>

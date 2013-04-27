@@ -1,0 +1,72 @@
+MakexVars := function(R)
+i := 1;
+base := [R|];
+for i in [1 .. Rank(R)] do
+	base[i] := R.i;
+end for;
+return IdealWithFixedBasis(base);
+end function;
+
+
+MakeJacobian := function(f,xVars,R)
+base := [R|];
+i := 1;
+for i in [1 .. #Basis(xVars)] do
+	base[i] := Derivative(f,Basis(xVars)[i]);
+end for;
+return IdealWithFixedBasis(base);
+end function;
+
+
+ReducePoleOrder := function(g,Jaco,xVaris)
+i := 1;
+outs := 0;
+coords := Coordinates(Jaco,g);
+for i in [1 .. #Basis(xVaris)] do
+	outs +:= Derivative(coords[i],Basis(xVaris)[i]);
+end for;
+return outs;
+end function;
+
+
+ReducePoleOrderCompletely := function(derivs,Jaco,xVaris)
+j := 0;
+md := #derivs;
+for j in [0 .. md-2] do
+	g := derivs[md-j];
+	toStay := NormalForm(g,Jaco);
+	toReduce := g - toStay;
+	derivs[md - j -1] +:= 1/(md-j-1)*ReducePoleOrder(toReduce,Jaco,xVaris);
+	derivs[md - j] := toStay;
+end for;
+return derivs;
+end function;
+K<t,s,u> := FunctionField(Rationals(),3);
+R<z0,z1,z2,z3,z4> := PolynomialRing(K,5);
+f := z0^2 - 4*z1^3*z2^2 - (z2^4*z3^10)/2 + t*z0*z1*z2*z3*z4 + u*z2^2*z3^6*z4^6 + s*z1*z4^10 + z3^2*z4^12;
+xVars := MakexVars(R);
+Jac := MakeJacobian(f,xVars,R);
+D1t:=[0, -(z0*z1*z2*z3*z4), 0];
+D1s:=[0, -(z1*z4^10), 0];
+D1u:=[0, -(z2^2*z3^6*z4^6), 0];
+D2t:=[0, 0, 2*z0^2*z1^2*z2^2*z3^2*z4^2];
+D2s:=[0, 0, 2*z1^2*z4^20];
+D2u:=[0, 0, 2*z2^4*z3^12*z4^12];
+D1ts:=[0, 0, 2*z0*z1^2*z2*z3*z4^11];
+D1tu:=[0, 0, 2*z0*z1*z2^3*z3^7*z4^7];
+D1su:=[0, 0, 2*z1*z2^2*z3^6*z4^16];
+D1t := ReducePoleOrderCompletely(D1t,Jac,xVars);
+D1s := ReducePoleOrderCompletely(D1s,Jac,xVars);
+D1u := ReducePoleOrderCompletely(D1u,Jac,xVars);
+D2t := ReducePoleOrderCompletely(D2t,Jac,xVars);
+D2s := ReducePoleOrderCompletely(D2s,Jac,xVars);
+D2u := ReducePoleOrderCompletely(D2u,Jac,xVars);
+D1ts := ReducePoleOrderCompletely(D1ts,Jac,xVars);
+D1tu := ReducePoleOrderCompletely(D1tu,Jac,xVars);
+D1su := ReducePoleOrderCompletely(D1su,Jac,xVars);
+DegZeroPieces := [D1t[1],D1s[1],D1u[1], D2t[1],D2s[1],D2u[1],D1ts[1],D1tu[1],D1su[1]];
+DegZeroPieces;
+DegKPieces := [D1t[2],D1s[2],D1u[2], D2t[2],D2s[2],D2u[2],D1ts[2],D1tu[2],D1su[2]];
+DegKPieces;
+DegTwoKPieces := [D1t[3],D1s[3],D1u[3], D2t[3],D2s[3],D2u[3],D1ts[3],D1tu[3],D1su[3]];
+DegTwoKPieces;

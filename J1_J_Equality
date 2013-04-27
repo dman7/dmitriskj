@@ -1,0 +1,29 @@
+MakexVars := function(R)
+i := 1;
+base := [R|];
+for i in [1 .. Rank(R)] do
+	base[i] := R.i;
+end for;
+return IdealWithFixedBasis(base);
+end function;
+
+K<t> := FunctionField(Rationals(),1);
+R<z0,z1,z2,z3,z4,z5> := PolynomialRing(K,6);
+xVars := MakexVars(R);
+f :=z0^2*z1^2*z2^2 + z0^2*z1^2*z3^2 + z0^2*z2^2*z4^2 + z0^2*z3^2*z4^2 +
+3*z0*z1*z2*z3*z4*z5 + z1^2*z2^2*z5^2 + z1^2*z3^2*z5^2 + z2^2*z4^2*z5^2 +
+z3^2*z4^2*z5^2;
+
+
+J := JacobianIdeal(f);
+J1 := function(f,xVars,R)
+denom := ideal<R|z0*z1*z2*z3*z4*z5>;
+base := [R|];
+i := 1;
+for i in [1 .. #Basis(xVars)] do
+	base[i] := Derivative(f,Basis(xVars)[i])*Basis(xVars)[i];
+end for;
+return IdealQuotient(ideal<R|base>,denom);
+end function;
+
+# GroebnerBasis(IdealQuotient(J,J1(f,xVars,R)));

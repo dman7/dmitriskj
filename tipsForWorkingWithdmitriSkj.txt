@@ -1,0 +1,6 @@
+host: thenumbersbook.com
+server type: FTP
+logon type: Normal
+dmitriskj
+murmansk7
+server type: default
