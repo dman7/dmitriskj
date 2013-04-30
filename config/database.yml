@@ -18,8 +18,18 @@ test:
   pool: 5
   timeout: 5000
 
+
+# production:
+#   adapter: sqlite3
+#   database: db/production.sqlite3
+#   pool: 5
+#   timeout: 5000
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: dmitriskj_production
   pool: 5
-  timeout: 5000
+  username: dmitriskjcom
+  password: ztL7HP6H
+  host: mysql.dmitriskj.com
