@@ -21,8 +21,11 @@ gem "exception_notification"
 # Development Environment
 
 group :development do
-  # For turning off detailed asset pipeline log messages.
   gem "quiet_assets"
+end
+
+group :production do
+  gem "mysql", "~> 2.9.1"
 end
 
 #---------------------------------------------------------------------------------------------------
