@@ -1,0 +1,105 @@
+#!/bin/bash
+#
+# This script is used to deploy to production on SoftLayer.
+# This script should only be run from the root of the project folder.
+# All deployments will run migrations and restart the server.
+#
+# Possible Uses:
+#
+# (1) Ship to production without worrying about precompiled assets.
+#   $ ./ship
+#
+# (2) Ship to production. Clean out old assets and then precompile new ones from scratch.
+#   $ ./ship --recompile 
+#
+# (3) Ship to production. Precompile assets, assuming old ones have already been cleared out.
+#   $ ./ship --precompile
+#
+# Note that only one of the two possible flags can be supplied.
+#
+# Assumptions:
+#
+# (1) You've added 'production' as remote git repository on your local machine using 
+#     `git remote add production ssh://deploy@$PRODUCTION_SERVER:528/opt/wonderland.git`
+#
+#---------------------------------------------------------------------------------------------------
+
+# This stops the script from executing if any interim command fails.
+# http://stackoverflow.com/questions/821396/aborting-a-shell-script-if-any-command-returns-a-non-zero-value
+set -e
+set -o pipefail
+
+PROJECT_ROOT=`pwd`
+
+#---------------------------------------------------------------------------------------------------
+
+# This prints out the commits we're about to deploy to production, and confirms.
+# See: https://github.com/gma/heroku-deploy-rails/blob/master/deploy.sh
+
+git fetch production
+range="production/master..master"
+commits=$(git log --reverse --pretty=format:'%h | %cr: %s (%an)' $range)
+    
+if [ -z "$commits" ]; then
+    echo "Nothing to deploy"
+    exit 1
+else
+  echo "Shipping to production!"
+  echo -e "Undeployed commits:\n"
+  echo -e "$commits"
+  echo -e -n "\nPress enter to continue... "
+  read
+fi
+
+#---------------------------------------------------------------------------------------------------
+
+# We only ever ship from the master branch.
+git checkout master
+
+#---------------------------------------------------------------------------------------------------
+
+# If we need to precompile assets, we do this now.
+# Precompiling is now an optional part of shipping. It is indicated with a --precompile flag.
+# Currently, this is the only possible argument that this script takes, so we can do this the easy way.
+# In future, if more arguments are possible, then we should use getopts.
+# http://tldp.org/LDP/abs/html/ || http://linux.die.net/abs-guide/
+# http://www.ibm.com/developerworks/linux/library/l-bash2/index.html
+# http://www.ibm.com/developerworks/aix/library/au-getstartedbash/index.html
+
+FLAG=$1
+
+if [ "$FLAG" = "--recompile" ]
+then
+  rm -r public/assets/
+  git commit -am "Cleaned out old precompiled assets."
+  # Now that we've cleaned out the old assets, we need to precompile them.
+  FLAG="--precompile"
+fi
+
+# TODO: Time this precompilation step.
+
+if [ "$FLAG" = "--precompile" ]
+then
+  echo "Precompiling assets..."
+  RAILS_ENV=production bundle exec rake --trace assets:precompile
+
+  # Commit, and deploy.
+  git add public/assets/
+  git commit -a -m "Precompiled assets for deployment to production."
+
+  echo "Done precompiling!"
+fi
+
+#---------------------------------------------------------------------------------------------------
+
+# Note: if the remote server aborts because untracked changes will be lost, then simply
+# ssh into the app directory, and run 'git reset --hard origin/master'.
+git push production master
+
+#---------------------------------------------------------------------------------------------------
+
+# Lastly, we exit from the script, returning the exit value of the last command.
+exit
+
+#---------------------------------------------------------------------------------------------------
+
