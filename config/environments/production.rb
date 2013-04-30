@@ -48,6 +48,13 @@ Dmitriskj::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
 
+
+  config.assets.precompile += ["bootstrap.js", "bootstrap.min.js"]
+  config.assets.precompile += ["base.css", "bootstrap-responsive.css", "bootstrap.css", "flat-ui.css"]
+
+
+
+
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 

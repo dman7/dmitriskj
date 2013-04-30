@@ -1,38 +1,40 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+#---------------------------------------------------------------------------------------------------
+# core functionality
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem "rails", :git => "git://github.com/rails/rails.git", :branch => "3-2-stable"
 
-gem 'sqlite3'
+#---------------------------------------------------------------------------------------------------
+# Server
 
+gem "unicorn"
+gem "pg"
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+#---------------------------------------------------------------------------------------------------
+# Reporting
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+# Error-Handling
+gem "exception_notification"
 
-  gem 'uglifier', '>= 1.0.3'
+#---------------------------------------------------------------------------------------------------
+# Development Environment
+
+group :development do
+  # For turning off detailed asset pipeline log messages.
+  gem "quiet_assets"
 end
 
-gem 'jquery-rails'
+#---------------------------------------------------------------------------------------------------
+# Assets
+# These gems are used only for assets and not required in production environments by default.
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :assets do
+  gem "coffee-rails",   "~> 3.2.1"
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+  # minification
+  gem "uglifier",       ">=1.0.3"   # JS
+  gem "yui-compressor"              # CSS
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+#---------------------------------------------------------------------------------------------------
