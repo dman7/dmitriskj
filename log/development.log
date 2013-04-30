@@ -8385,3 +8385,117 @@ Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
 
 Started GET "/assets/flat-ui.css?body=1" for 127.0.0.1 at 2013-04-27 16:45:48 -0700
 Served asset /flat-ui.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-29 19:28:02 -0700
+Connecting to database specified by database.yml
+
+PG::Error (FATAL:  database "dmitriskj_development" does not exist
+):
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:1218:in `initialize'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:1218:in `new'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:1218:in `connect'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:324:in `initialize'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `new'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb:28:in `postgresql_connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/query_cache.rb:67:in `rescue in call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/query_cache.rb:61:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activesupport/lib/active_support/callbacks.rb:405:in `_run__2781441281460669193__call__2915571210667329526__callbacks'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activesupport/lib/active_support/callbacks.rb:405:in `__run_callback'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activesupport/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activesupport/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/railties/lib/rails/rack/logger.rb:32:in `call_app'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/railties/lib/rails/rack/logger.rb:16:in `block in call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activesupport/lib/active_support/tagged_logging.rb:22:in `tagged'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/railties/lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/activesupport/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/static.rb:63:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/railties/lib/rails/engine.rb:479:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/railties/lib/rails/application.rb:223:in `call'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/railties/lib/rails/railtie/configurable.rb:30:in `method_missing'
+  rack (1.4.5) lib/rack/lint.rb:48:in `_call'
+  rack (1.4.5) lib/rack/lint.rb:36:in `call'
+  rack (1.4.5) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.4.5) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.4.5) lib/rack/chunked.rb:43:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.6.2) lib/unicorn/http_server.rb:552:in `process_client'
+  unicorn (4.6.2) lib/unicorn/http_server.rb:632:in `worker_loop'
+  unicorn (4.6.2) lib/unicorn/http_server.rb:500:in `spawn_missing_workers'
+  unicorn (4.6.2) lib/unicorn/http_server.rb:142:in `start'
+  unicorn (4.6.2) bin/unicorn:126:in `<top (required)>'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/bin/unicorn:19:in `load'
+  /Users/dmitri/.rbenv/versions/1.9.3-p0/bin/unicorn:19:in `<main>'
+
+
+  Rendered /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/dmitri/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/bundler/gems/rails-9d7a748a5174/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-29 19:29:49 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-04-29 19:29:51 -0700
+Processing by HomeController#about as HTML
+  Rendered home/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-29 19:29:52 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-04-29 19:29:56 -0700
+Processing by HomeController#about as HTML
+  Rendered home/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-29 19:29:58 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2013-04-29 19:30:01 -0700
+Processing by HomeController#about as HTML
+  Rendered home/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-29 19:30:02 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
