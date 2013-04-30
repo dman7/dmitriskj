@@ -8,8 +8,8 @@ gem "rails", :git => "git://github.com/rails/rails.git", :branch => "3-2-stable"
 #---------------------------------------------------------------------------------------------------
 # Server
 
-gem "unicorn"
-gem "pg"
+# Bundle edge Rails instead:
+gem 'sqlite3'
 
 #---------------------------------------------------------------------------------------------------
 # Reporting
