@@ -35,7 +35,11 @@ base.css: base-58590b17e5d73f0b4e3bc5bf25ab1ffe.css
 base/index.css: base-58590b17e5d73f0b4e3bc5bf25ab1ffe.css
 bootstrap-responsive.css: bootstrap-responsive-e69fe170843062fac5372bf609cb5d54.css
 bootstrap-responsive/index.css: bootstrap-responsive-e69fe170843062fac5372bf609cb5d54.css
+bootstrap-responsive.min.css: bootstrap-responsive.min-49b8a3614cf8249206b513a784ec9787.css
+bootstrap-responsive/index.min.css: bootstrap-responsive.min-49b8a3614cf8249206b513a784ec9787.css
 bootstrap.css: bootstrap-51358b65ef37c59733639dfeaa4675e3.css
 bootstrap/index.css: bootstrap-51358b65ef37c59733639dfeaa4675e3.css
+bootstrap.min.css: bootstrap.min-0179d14ed04fe98741b1ea30cc3e11a5.css
+bootstrap/index.min.css: bootstrap.min-0179d14ed04fe98741b1ea30cc3e11a5.css
 flat-ui.css: flat-ui-47d991e8c2260a7f7c38bd50903f1ad4.css
 flat-ui/index.css: flat-ui-47d991e8c2260a7f7c38bd50903f1ad4.css
