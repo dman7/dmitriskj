@@ -50,7 +50,7 @@ Dmitriskj::Application.configure do
 
 
   config.assets.precompile += ["bootstrap.js", "bootstrap.min.js"]
-  config.assets.precompile += ["base.css", "bootstrap-responsive.css", "bootstrap.css", "flat-ui.css"]
+  config.assets.precompile += ["base.css", "bootstrap-responsive.css", "bootstrap-responsive.min.css", "bootstrap.min.css", "bootstrap.css", "flat-ui.css"]
 
 
 
