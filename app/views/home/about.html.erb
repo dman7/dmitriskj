@@ -6,11 +6,14 @@
 
 
 <% content_for :content do %>
-  <div class = "tile">
+  <div class = "tile" style = "max-width: 300px; margin: 0 auto 20px;">
     <h1>Developer</h1>
+    <br>
 
-    <div style = "font-size: 12px; margin-top: 50px;">
+    <a href = "http://www.linkedin.com/in/dmitriskj"><%= image_tag "linkedin.png", :style => "height: 15%; width: 15%;" %></a>
+    <a href = "https://github.com/dman7"><%= image_tag "github.png", :style => "height: 15%; width: 15%;" %></a>
 
+    <div style = "font-size: 12px; margin-top: 30px;">
       Built with <a href = "http://twitter.github.io/bootstrap/">Bootstrap</a>, <a href = "http://designmodo.github.io/Flat-UI/">Flat UI</a>, and <a href = "http://subtlepatterns.com">Subtle Patterns</a>.
     </div>
   </div>
