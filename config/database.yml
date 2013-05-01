@@ -31,5 +31,5 @@ production:
   database: dmitriskj_production
   pool: 5
   username: dmitriskjcom
-  password: ztL7HP6H
+  password: ztL7434
   host: mysql.dmitriskj.com
