@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# Copied from: http://blog.micahchalmer.net/blog/2012/dreamhost-shared-hosting-rbenv
+# and: https://gist.github.com/MicahChalmer/4316253
 this_dir=`dirname $0`
 
 #this_dir=`/home/dmitriskj/dmitriskj.com`
