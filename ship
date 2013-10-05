@@ -66,29 +66,29 @@ git checkout master
 # http://www.ibm.com/developerworks/linux/library/l-bash2/index.html
 # http://www.ibm.com/developerworks/aix/library/au-getstartedbash/index.html
 
-FLAG=$1
+# FLAG=$1
 
-if [ "$FLAG" = "--recompile" ]
-then
-  rm -r public/assets/
-  git commit -am "Cleaned out old precompiled assets."
-  # Now that we've cleaned out the old assets, we need to precompile them.
-  FLAG="--precompile"
-fi
+# if [ "$FLAG" = "--recompile" ]
+# then
+#   rm -r public/assets/
+#   git commit -am "Cleaned out old precompiled assets."
+#   # Now that we've cleaned out the old assets, we need to precompile them.
+#   FLAG="--precompile"
+# fi
 
-# TODO: Time this precompilation step.
+# # TODO: Time this precompilation step.
 
-if [ "$FLAG" = "--precompile" ]
-then
-  echo "Precompiling assets..."
-  RAILS_ENV=production bundle exec rake --trace assets:precompile
+# if [ "$FLAG" = "--precompile" ]
+# then
+#   echo "Precompiling assets..."
+#   RAILS_ENV=production bundle exec rake --trace assets:precompile
 
-  # Commit, and deploy.
-  git add public/assets/
-  git commit -a -m "Precompiled assets for deployment to production."
+#   # Commit, and deploy.
+#   git add public/assets/
+#   git commit -a -m "Precompiled assets for deployment to production."
 
-  echo "Done precompiling!"
-fi
+#   echo "Done precompiling!"
+# fi
 
 #---------------------------------------------------------------------------------------------------
 
