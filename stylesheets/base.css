@@ -7,12 +7,11 @@ Color palette: triadic with #e9eae0 as the primary color and secondary colors 90
       
 html, body { height: 100%; background-image: url("../images/subtle_white_feathers.png"); }
 body { font-family: 'Lato', sans-serif;  }
-h1 { font-family: 'Open Sans', sans-serif; font-size: 56px; }
 body .container p  { color: #428bca;}
 body .container h1 { color: #428bca;}
 
 #wrap p { font-size: 32px; }
-h1 { font-family: 'Open Sans', sans-serif; }
+h1 { font-family: 'Lobster', sans-serif; font-size: 56px; }
 
 
 /* ************************************************************************** */
@@ -49,7 +48,7 @@ h1 { font-family: 'Open Sans', sans-serif; }
 
 
 
-.navbar { background-color: white; height: 100px; font-family: 'Open Sans', sans-serif; background-color: #e9eae0; }
+.navbar { background-color: white; height: 100px; font-family: 'Lobster', sans-serif; background-color: #e9eae0; }
 .navbar ul { margin-top: 20px !important; font-size: 24px; }
 
 .navbar-header { margin-top: 20px; }
@@ -64,7 +63,6 @@ h1 { font-family: 'Open Sans', sans-serif; }
 .navbar-default .navbar-nav>.active>a:focus { background-color: inherit; color: #9b744a !important; } 
 /* Alternative color: #428bca*/
 /*#2f5361*/
-.navbar-default .navbar-nav a { font-family: 'Open Sans', sans-serif; }
 .navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus { color: #9b744a !important; }
 
 
