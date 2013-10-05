@@ -1,69 +1,84 @@
 <!DOCTYPE html>
-<html itemscope itemtype = "http://schema.org/Person">
+<html lang="en">
 <head>
-  <title></title>
+  <title>Dmitri's Digital Presence</title>
 
-  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-  <meta name = "author" content = "Dmitri Skjorshammer">
-  <meta name = "description" content = "Dmitri's Digital Presence">
-  <meta http-equiv = "X-UA-Compatible" content = "IE=edge" /> 
-  <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" /> 
+  <!-- Mobile-first; disallow zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <meta name="description" content="Dmitri Skjorshammer is an entrepreneur in the San Francisco Bay Area">
+  <meta name="author" content="Dmitri Skjorshammer">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
   <link rel = "shortcut icon" href = "/favicon.ico" />
 
-
-  <!-- Load CSS -->
-  <style type="text/css">
-    body { padding-top: 60px; padding-bottom: 40px; }
-  </style>
-
-  <link rel = "stylesheet" type = "text/css" href = "stylesheets/bootstrap.min.css">
-  <link rel = "stylesheet" type = "text/css" href = "stylesheets/bootstrap-responsive.min.css">
-  <link rel = "stylesheet" type = "text/css" href = "stylesheets/flat-ui.css">
-  <link rel = "stylesheet" type = "text/css" href = "stylesheets/base.css">
+  <!-- Stylesheets -->
+  <link href="stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/base.css" media="screen" rel="stylesheet" type="text/css" />
 
 
-
-  <!-- Load JavaScript -->
+  <!-- JavaScript -->
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <script src = "https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.min.js" type = "text/javascript"></script>
-  <script src = "javascripts/bootstrap.min.js" type = "text/javascript"></script>
+  <script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
+<body>
+  <div id = "wrap">
 
-<body> 
-  <!-- Header -->
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container-fluid" style = "margin-left: 40%;">
-
-        <button type = "button" class = "btn btn-navbar" data-toggle = "collapse" data-target = ".nav-collapse">
-          <span class = "icon-bar"></span>
-          <span class = "icon-bar"></span>
-          <span class = "icon-bar"></span>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href = "#">Home</a></li>
+          <li><a href = "about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
 
 
-        <div class = "nav-collapse collapse">
-          <ul class = "nav nav-pills" >
-            <li class = "active"><a href = "/"><h1>Home</h1></a></li>
-            <li><a href = "about.html"><h1>About</h1></a></li>
-          </ul>
-        </div>
+    <!-- Body -->
+    <div class="container">
+      <div class = "header" style = "color: white;">
+        <h1>Dmitri</h1>
+        <p>Developer</p>
+      </div>
+    </div>
+
+    <div id = "push"></div>
+  </div>
+
+
+  <!-- Footer -->
+  <div id = "footer">
+    <div class="container row">
+      <div class = "col-md-4">
+        <p style = "text-align: left; display: inline;">
+          Built with <a href = "http://getbootstrap.com/">Bootstrap</a> and <a href = "http://subtlepatterns.com">Subtle Patterns</a>.
+        </p>
+      </div>
+
+      <div class  = "col-md-3 col-md-offset-2" style="text-align:center;">
+        <p>&copy; Dmitri Skjorshammer 2013</p>
       </div>
     </div>
   </div>
 
 
+  <!-- Footer Stylesheets and JavaScript -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:100|Open+Sans:800' rel='stylesheet' type='text/css'>
 
-
-  <!-- Body -->
-  <div class = "container" style = "padding-top: 100px;">
-  </div>
-
-
-  <!-- Footer CSS -->
-  <link href='http://fonts.googleapis.com/css?family=Cabin|Lobster' rel='stylesheet' type='text/css'>
-
-  <!-- Footer JavaScript -->
   <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-10385421-4']);
@@ -73,14 +88,9 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-
-    // Animate my name
-    $(document).ready(function()
-    {
-      $("#first_name").animate({"opacity": 1}, 2000); 
-      setTimeout("$('#last_name').animate({'opacity': 1}, 2000)", 2000);
-    })
   </script>
 
 </body>
 </html>
+
+
