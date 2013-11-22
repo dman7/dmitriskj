@@ -5,14 +5,14 @@ Color palette: triadic with #e9eae0 as the primary color and secondary colors 90
 
 */
       
-/*html, body { height: 100%; background-image: url("../images/subtle_white_feathers.png"); }*/
-html, body { height: 100%; background-image: url("../images/wood.jpg"); }
+/*html, body { height: 100%; background-image: url("../images/low_contrast_linen.png"); }*/
+html, body { height: 100%; background-image: url("../images/purty_wood.png"); }
 body { font-family: 'Lato', sans-serif;  }
 body .container p  { color: #428bca;}
 body .container h1 { color: #428bca;}
 
 #wrap p { font-size: 32px; }
-h1 { font-family: 'Lobster', sans-serif; font-size: 56px; }
+/*h1 { font-family: 'Open Sans', sans-serif; font-size: 56px; }*/
 
 
 /* ************************************************************************** */
@@ -40,16 +40,23 @@ h1 { font-family: 'Lobster', sans-serif; font-size: 56px; }
 .navbar { position: relative;}
 #wrap > .container { position: relative;}
 
-#footer .container { margin-top: 30px; }
+#footer .container { margin-top: 15px; }
+#footer .container { margin-bottom: 15px; }
+#footer .container { margin: auto; }
 
 
 
 /* ************************************************************************** */
 /* Navigation Bar */
 
+/*.navbar { background-color: white; height: 100px; font-family: 'Open Sans', sans-serif; background-color: #e9eae0; }*/
+/*.navbar { background-color: white; height: 100px; font-family: 'Open Sans', sans-serif; background-image: url("../images/low_contrast_linen.png"); }*/
+.navbar { background-color: white; height: 100px; font-family: 'Lato', sans-serif; background-image: url("../images/low_contrast_linen.png"); }
 
 
-.navbar { background-color: white; height: 100px; font-family: 'Lobster', sans-serif; background-color: #e9eae0; }
+.navbar { border-radius: 0px;}
+.navbar-default { border: none; }
+
 .navbar ul { margin-top: 20px !important; font-size: 24px; }
 
 .navbar-header { margin-top: 20px; }
@@ -57,18 +64,20 @@ h1 { font-family: 'Lobster', sans-serif; font-size: 56px; }
 
 .nav-list a:hover { background-color: white !important; }
 
-.navbar-collapse { margin: auto; background-color: inherit;}
+/*.navbar-collapse { margin: auto; background-color: inherit; }*/
+.navbar-collapse { margin: auto; background-image: url('../images/low_contrast_linen.png');}
 
-.navbar-default .navbar-nav>.active>a, 
+/* TODO: Remove this if not used. */
+/*.navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:hover, 
-.navbar-default .navbar-nav>.active>a:focus { background-color: inherit; color: #9b744a !important; } 
-/* Alternative color: #428bca*/
-/*#2f5361*/
-.navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus { color: #9b744a !important; }
+.navbar-default .navbar-nav>.active>a:focus { background-color: inherit; color: #9b744a !important; } */
+/* Alternative colors: #428bca, #2f5361 */
 
+
+/*.navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus { color: #9b744a !important; }*/
+.navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus { color: #fff !important; }
 
 .navbar .nav,
-
 .navbar .nav > li {
   float:none;
   display:inline-block;
@@ -97,9 +106,13 @@ h1 { font-family: 'Lobster', sans-serif; font-size: 56px; }
 /* ************************************************************************** */
 /* Footer Bar */
 
-#footer { background-color: #e9eae0; }
-#footer p { color: #afb0aa !important; }
-#footer a { color: #9b744a !important; }
+/*#footer { background-color: #e9eae0; }*/
+#footer { background-color: transparent; border-color: transparent; }
 
+
+/*#footer p { color: #9b744a !important; }*/
+/*#footer a { color: #afb0aa !important; }*/
+#footer p { color: #393939 !important; }
+#footer a { color: #9b744a !important; }
 
 /*.active a { background-color: inherit !important; }*/
