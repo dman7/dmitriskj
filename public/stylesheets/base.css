@@ -5,7 +5,8 @@ Color palette: triadic with #e9eae0 as the primary color and secondary colors 90
 
 */
       
-html, body { height: 100%; background-image: url("../images/subtle_white_feathers.png"); }
+/*html, body { height: 100%; background-image: url("../images/subtle_white_feathers.png"); }*/
+html, body { height: 100%; background-image: url("../images/wood.jpg"); }
 body { font-family: 'Lato', sans-serif;  }
 body .container p  { color: #428bca;}
 body .container h1 { color: #428bca;}
