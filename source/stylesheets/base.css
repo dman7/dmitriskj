@@ -77,6 +77,11 @@ body .container h1 { color: #428bca;}
 /*.navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus { color: #9b744a !important; }*/
 .navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav a:focus { color: #fff !important; }
 
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus { background-color: inherit; color: #fff !important; } 
+
+
 .navbar .nav,
 .navbar .nav > li {
   float:none;
