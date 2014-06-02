@@ -13,12 +13,13 @@ body { font-family: 'Lato', sans-serif;  }
 
 body .container p  { color: #ecf0f1;}
 body .container h1 { color: #ecf0f1;}
+body .container a { color: #2bbe68 !important; }
+
 
 #wrap p { font-size: 32px; }
 /*h1 { font-family: 'Open Sans', sans-serif; font-size: 56px; }*/
 
 
-a { color: #2bbe68 !important; }
 
 /* ************************************************************************** */
 /* Sticky Footer */
