@@ -10,7 +10,7 @@
 #   $ ./ship
 #
 # (2) Ship to production. Clean out old assets and then precompile new ones from scratch.
-#   $ ./ship --recompile 
+#   $ ./ship --recompile
 #
 # (3) Ship to production. Precompile assets, assuming old ones have already been cleared out.
 #   $ ./ship --precompile
@@ -19,7 +19,7 @@
 #
 # Assumptions:
 #
-# (1) You've added 'production' as remote git repository on your local machine using 
+# (1) You've added 'production' as remote git repository on your local machine using
 #     `git remote add production ssh://deploy@$PRODUCTION_SERVER:528/opt/wonderland.git`
 #
 #---------------------------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ PROJECT_ROOT=`pwd`
 git fetch production
 range="production/master..master"
 commits=$(git log --reverse --pretty=format:'%h | %cr: %s (%an)' $range)
-    
+
 if [ -z "$commits" ]; then
     echo "Nothing to deploy"
     exit 1
@@ -58,40 +58,6 @@ git checkout master
 
 #---------------------------------------------------------------------------------------------------
 
-# If we need to precompile assets, we do this now.
-# Precompiling is now an optional part of shipping. It is indicated with a --precompile flag.
-# Currently, this is the only possible argument that this script takes, so we can do this the easy way.
-# In future, if more arguments are possible, then we should use getopts.
-# http://tldp.org/LDP/abs/html/ || http://linux.die.net/abs-guide/
-# http://www.ibm.com/developerworks/linux/library/l-bash2/index.html
-# http://www.ibm.com/developerworks/aix/library/au-getstartedbash/index.html
-
-# FLAG=$1
-
-# if [ "$FLAG" = "--recompile" ]
-# then
-#   rm -r public/assets/
-#   git commit -am "Cleaned out old precompiled assets."
-#   # Now that we've cleaned out the old assets, we need to precompile them.
-#   FLAG="--precompile"
-# fi
-
-# # TODO: Time this precompilation step.
-
-# if [ "$FLAG" = "--precompile" ]
-# then
-#   echo "Precompiling assets..."
-#   RAILS_ENV=production bundle exec rake --trace assets:precompile
-
-#   # Commit, and deploy.
-#   git add public/assets/
-#   git commit -a -m "Precompiled assets for deployment to production."
-
-#   echo "Done precompiling!"
-# fi
-
-#---------------------------------------------------------------------------------------------------
-
 # Note: if the remote server aborts because untracked changes will be lost, then simply
 # ssh into the app directory, and run 'git reset --hard origin/master'.
 git push production master
@@ -102,4 +68,3 @@ git push production master
 exit
 
 #---------------------------------------------------------------------------------------------------
-
