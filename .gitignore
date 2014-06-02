@@ -7,9 +7,6 @@
 # Ignore bundler config
 /.bundle
 
-# Ignore the build directory
-/build
-
 # Ignore Sass' cache
 /.sass-cache
 
@@ -18,4 +15,4 @@
 
 
 app/views/tipsForWorkingWithdmitriSkj.txt
-app/views/550e8400-e29b-41d4-a716-446655440000.html 
+app/views/550e8400-e29b-41d4-a716-446655440000.html
