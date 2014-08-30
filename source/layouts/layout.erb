@@ -88,6 +88,12 @@
         </p>
       </div>
     </div>
+
+    <% if content_for :footer %>
+      <%= yield_content(:footer) %>
+    <% end %>
+
+
   </div>
 
 
