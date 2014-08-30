@@ -1,0 +1,20 @@
+.blog
+  %h1#blog-title
+    Blog
+
+  - blog.articles[0...5].each do |article|
+    %article
+      %h1
+        %a{:href => "#{article.url}"}
+          = article.title
+        %time
+          = article.date.strftime('%b %e %Y')
+
+
+      = article.summary
+
+      %a{:href => "#{article.url}"} Read more
+
+
+- content_for :footer do
+  = stylesheet_link_tag "blog"
