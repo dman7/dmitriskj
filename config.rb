@@ -38,7 +38,6 @@
 # Reload the browser automatically whenever files change
 # activate :livereload
 
-activate :directory_indexes
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -70,3 +69,20 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+#------------------------------------------------------------------------------
+# Blog configuration
+
+activate :blog do |blog|
+  blog.sources   = "blog/{year}/{title}.html"
+  blog.permalink = "blog/{title}.html"
+  blog.layout    = "layout"
+end
+
+#------------------------------------------------------------------------------
+# Allow ".html"-free paths
+# NOTE: This must be activated *after* the blog. See http://middlemanapp.com/basics/blogging/
+
+activate :directory_indexes
+
+#------------------------------------------------------------------------------
