@@ -39,20 +39,15 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse navbar-ex1-collapse" role="navigation">
 
       <ul class="nav navbar-nav">
-<!--         <% nav_links = [ ["Home", "/"], ["Projects", "/projects/"], ["About", "/about/"] ] %>
-        <% nav_links.each do |link| %>
-          <li class = <%= (current_page.url == link[1] ? "active" : "") %> ><%= link_to link[0], link[1] %></li>
-        <% end %> -->
         <li class = "active">
           <%= link_to "<icon class ='fa fa-home'>".html_safe, "/"  %>
         </li>
+
+<!--         <li>
+          <%= link_to "<icon class ='fa fa-file-o'>".html_safe, "/blog"  %>
+        </li> -->
       </ul>
     </nav>
-
-
-<!--     <div style = "position: absolute; left: 95%; bottom: 50%;">
-      <icon class = "fa fa-chevron-right" style = "color: #2ecc71; font-size: 36px;">
-    </div> -->
 
 
     <!-- Body -->
