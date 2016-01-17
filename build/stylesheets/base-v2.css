@@ -1,0 +1,29 @@
+/* line 3, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+body {
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-weight: 700; }
+  /* line 7, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+  body .h1 {
+    font-weight: 700; }
+
+/* line 14, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+nav#header {
+  border-bottom: 1px solid #f7f7f9;
+  margin-bottom: 4rem; }
+/* line 20, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+nav#footer ul.row {
+  justify-content: center;
+  align-items: center; }
+/* line 26, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+nav .navbar-brand {
+  padding-top: .5rem;
+  padding-bottom: .5rem; }
+/* line 31, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+nav ul.nav {
+  height: 50px;
+  padding-top: .5rem;
+  padding-bottom: .5rem; }
+
+/* line 40, /opt/dmitriskj/source/stylesheets/base-v2.scss */
+.light-font {
+  font-weight: 300; }
