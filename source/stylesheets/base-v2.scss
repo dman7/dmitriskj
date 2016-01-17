@@ -1,0 +1,42 @@
+@import "variables";
+
+body {
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+
+  .h1 {
+    font-weight: 700;
+  }
+}
+
+
+nav {
+  &#header {
+    border-bottom: 1px solid $faded-gray;
+    margin-bottom: 4rem;
+  }
+
+  &#footer {
+    ul.row {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .navbar-brand {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  ul.nav {
+    height: 50px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    // justify-content: center;
+    // align-items: center;
+  }
+}
+
+.light-font {
+  font-weight: 300;
+}
